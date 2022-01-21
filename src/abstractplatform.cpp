@@ -15,7 +15,7 @@
 #include "abstractplatform.h"
 
 #include "unknownplatform.h"
-#ifndef NOXCB
+#ifdef HAVE_XCB
 #include "xcbplatform.h"
 #endif
 #ifdef HAVE_WAYLAND
@@ -41,7 +41,7 @@ std::unique_ptr<AbstractPlatform> createPlatform()
         return std::unique_ptr<AbstractPlatform>(new Maliit::WaylandPlatform);
     }
 #endif
-#ifndef NOXCB
+#ifdef HAVE_XCB
     if (QGuiApplication::platformName() == "xcb") {
         return std::unique_ptr<AbstractPlatform>(new Maliit::XCBPlatform);
     }
