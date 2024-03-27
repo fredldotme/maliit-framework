@@ -460,7 +460,7 @@ if(enable-glib)
     install(FILES ${CMAKE_BINARY_DIR}/maliit-glib.pc DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
 endif()
 
-if(enable-qt5-inputcontext)
+if(enable-qt-inputcontext)
     install(TARGETS maliitplatforminputcontextplugin LIBRARY DESTINATION ${QT_PLUGINS_INSTALL_DIR}/platforminputcontexts)
 endif()
 
