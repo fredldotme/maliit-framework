@@ -19,6 +19,9 @@ option(enable-hwkeyboard "Enable support for the hardware keyboard" ON)
 option(enable-dbus-activation "Enable dbus activation support for maliit-server" OFF)
 option(with-qt6 "Built with Qt 6 instead of Qt 5" OFF)
 
+# Require -fPIC
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
 # Install paths
 include(GNUInstallDirs)
 
